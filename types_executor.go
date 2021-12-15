@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"regexp"
 	"strings"
 
 	"github.com/ghodss/yaml"
@@ -149,6 +150,12 @@ type executorWithZeroValueResult interface {
 type ExecutorWithSetup interface {
 	Setup(ctx context.Context, vars H) (context.Context, error)
 	TearDown(ctx context.Context) error
+}
+
+type executorWithGherkinSupport interface {
+	Given() *regexp.Regexp
+	When() *regexp.Regexp
+	Then() *regexp.Regexp
 }
 
 func GetExecutorResult(r interface{}) map[string]interface{} {

@@ -17,33 +17,45 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-func getFilesPath(path []string) (filePaths []string, err error) {
+func getFilesPath(path []string, extentions ...string) (filePaths []string, err error) {
+	if len(extentions) == 0 {
+		extentions = []string{".yml", ".yaml"}
+	}
 	for _, p := range path {
 		p = strings.TrimSpace(p)
 
+		var fpaths []string
 		// no need to check err on os.stat.
 		// if we put ./test/*.yml, it will fail and it's normal
 		fileInfo, _ := os.Stat(p)
 		if fileInfo != nil && fileInfo.IsDir() {
-			p = p + string(os.PathSeparator) + "*.yml"
-		}
-
-		fpaths, err := zglob.Glob(p)
-		if err != nil {
-			log.Errorf("error reading files on path %q err:%v", path, err)
-			return nil, errors.Wrapf(err, "error reading files on path %q", path)
+			for _, ext := range extentions {
+				p = p + string(os.PathSeparator) + "*" + ext
+				fglobs, err := zglob.Glob(p)
+				if err != nil {
+					log.Errorf("error reading files on path %q err:%v", path, err)
+					return nil, errors.Wrapf(err, "error reading files on path %q", path)
+				}
+				fpaths = append(fpaths, fglobs...)
+			}
+		} else {
+			fpaths, err = zglob.Glob(p)
+			if err != nil {
+				log.Errorf("error reading files on path %q err:%v", path, err)
+				return nil, errors.Wrapf(err, "error reading files on path %q", path)
+			}
 		}
 
 		for _, fp := range fpaths {
-			switch ext := filepath.Ext(fp); ext {
-			case ".yml", ".yaml":
+			ext := filepath.Ext(fp)
+			if IsInArray(ext, extentions) {
 				filePaths = append(filePaths, fp)
 			}
 		}
 	}
 
 	if len(filePaths) == 0 {
-		return nil, fmt.Errorf("no yml file selected")
+		return nil, fmt.Errorf("no file selected")
 	}
 	return uniq(filePaths), nil
 }
