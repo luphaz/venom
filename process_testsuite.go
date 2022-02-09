@@ -72,7 +72,7 @@ func (v *Venom) runTestCases(ctx context.Context, ts *TestSuite) {
 	var green = color.New(color.FgGreen).SprintFunc()
 	var cyan = color.New(color.FgCyan).SprintFunc()
 	var gray = color.New(color.Attribute(90)).SprintFunc()
-	verboseReport := v.Verbose > 0
+	verboseReport := v.Verbose >= 2
 
 	v.Println(" • %s (%s)", ts.Name, ts.Package)
 

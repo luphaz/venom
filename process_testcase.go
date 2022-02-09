@@ -253,7 +253,7 @@ func (v *Venom) runTestSteps(ctx context.Context, tc *TestCase, tsIn *TestStepRe
 				}
 			}
 
-			printStepName := v.Verbose > 0 && !fromUserExecutor
+			printStepName := v.Verbose >= 2 && !fromUserExecutor
 			v.setTestStepName(ts, e, step, &ranged, &rangedData, printStepName)
 			v.RunTestStep(ctx, e, tc, ts, stepNumber, rangedIndex, step)
 			tc.testSteps = append(tc.testSteps, step)
@@ -325,7 +325,7 @@ func (v *Venom) setTestStepName(ts *TestStepResult, e ExecutorRunner, step TestS
 
 //Print a single step result (if verbosity is enabled)
 func (v *Venom) printTestStepResult(tc *TestCase, ts *TestStepResult, tsIn *TestStepResult, stepNumber int, mustAssertionFailed bool) {
-	if v.Verbose > 0 {
+	if v.Verbose >= 2 {
 		fromUserExecutor := tsIn != nil
 		var red = color.New(color.FgRed).SprintFunc()
 		var green = color.New(color.FgGreen).SprintFunc()

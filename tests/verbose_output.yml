@@ -8,7 +8,7 @@ testcases:
     script: NO_COLOR=1 {{.venom.executable}} run failing/verbose_output.yml {{.value.opt}}
     range:
       verbose:
-        opt: "-v"
+        opt: "-vv"
         op: Should
       default:
         opt: ""
