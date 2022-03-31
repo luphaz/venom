@@ -11,7 +11,7 @@ import (
 	"mime/quotedprintable"
 	"net/mail"
 
-	"github.com/ovh/venom"
+	"github.com/luphaz/venom"
 	"github.com/yesnault/go-imap/imap"
 )
 

@@ -9,12 +9,12 @@ import (
 
 	"github.com/google/go-github/github"
 	"github.com/inconshreveable/go-update"
-	"github.com/ovh/venom"
-	"github.com/ovh/venom/cmd"
+	"github.com/luphaz/venom"
+	"github.com/luphaz/venom/cmd"
 	"github.com/spf13/cobra"
 )
 
-var urlGitubReleases = "https://github.com/ovh/venom/releases"
+var urlGitubReleases = "https://github.com/luphaz/venom/releases"
 
 // Cmd update
 var Cmd = &cobra.Command{
@@ -48,7 +48,7 @@ func getURLArtifactFromGithub() string {
 	}
 
 	text := "Invalid Artifacts on latest release. Please try again in few minutes.\n"
-	text += "If the problem persists, please open an issue on https://github.com/ovh/venom/issues\n"
+	text += "If the problem persists, please open an issue on https://github.com/luphaz/venom/issues\n"
 	cmd.Exit(text)
 	return ""
 }

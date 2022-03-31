@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ovh/venom"
+	"github.com/luphaz/venom"
 	"github.com/stretchr/testify/require"
 )
 

@@ -17,23 +17,23 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	"github.com/ovh/venom"
-	"github.com/ovh/venom/executors/amqp"
-	"github.com/ovh/venom/executors/dbfixtures"
-	"github.com/ovh/venom/executors/exec"
-	"github.com/ovh/venom/executors/grpc"
-	"github.com/ovh/venom/executors/http"
-	"github.com/ovh/venom/executors/imap"
-	"github.com/ovh/venom/executors/kafka"
-	"github.com/ovh/venom/executors/mqtt"
-	"github.com/ovh/venom/executors/ovhapi"
-	"github.com/ovh/venom/executors/rabbitmq"
-	"github.com/ovh/venom/executors/readfile"
-	"github.com/ovh/venom/executors/redis"
-	"github.com/ovh/venom/executors/smtp"
-	"github.com/ovh/venom/executors/sql"
-	"github.com/ovh/venom/executors/ssh"
-	"github.com/ovh/venom/executors/web"
+	"github.com/luphaz/venom"
+	"github.com/luphaz/venom/executors/amqp"
+	"github.com/luphaz/venom/executors/dbfixtures"
+	"github.com/luphaz/venom/executors/exec"
+	"github.com/luphaz/venom/executors/grpc"
+	"github.com/luphaz/venom/executors/http"
+	"github.com/luphaz/venom/executors/imap"
+	"github.com/luphaz/venom/executors/kafka"
+	"github.com/luphaz/venom/executors/mqtt"
+	"github.com/luphaz/venom/executors/ovhapi"
+	"github.com/luphaz/venom/executors/rabbitmq"
+	"github.com/luphaz/venom/executors/readfile"
+	"github.com/luphaz/venom/executors/redis"
+	"github.com/luphaz/venom/executors/smtp"
+	"github.com/luphaz/venom/executors/sql"
+	"github.com/luphaz/venom/executors/ssh"
+	"github.com/luphaz/venom/executors/web"
 )
 
 var (
@@ -307,10 +307,10 @@ var Cmd = &cobra.Command{
   Run a single testsuite and specify a variable: venom run mytestfile.yml --var="foo=bar"
   Run a single testsuite and load all variables from a file: venom run mytestfile.yml --var-from-file variables.yaml
   Run all testsuites containing in files ending with *.yml or *.yaml with verbosity: VENOM_VERBOSE=2 venom run
-  
+
   Notice that variables initialized with -var-from-file argument can be overrided with -var argument
-  
-  More info: https://github.com/ovh/venom`,
+
+  More info: https://github.com/luphaz/venom`,
 	Long: `run integration tests`,
 	PreRun: func(cmd *cobra.Command, args []string) {
 		if len(args) == 0 {

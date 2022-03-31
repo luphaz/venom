@@ -22,7 +22,7 @@ import (
 )
 
 var (
-	//Version is set with -ldflags "-X github.com/ovh/venom/venom.Version=$(VERSION)"
+	//Version is set with -ldflags "-X github.com/luphaz/venom/venom.Version=$(VERSION)"
 	Version = "snapshot"
 )
 

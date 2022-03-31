@@ -9,7 +9,7 @@ import (
 
 	"golang.org/x/net/http2"
 
-	"github.com/ovh/venom"
+	"github.com/luphaz/venom"
 )
 
 func GetTransport(opts ...func(*http.Transport) error) (*http.Transport, error) {

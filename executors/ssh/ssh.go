@@ -3,9 +3,6 @@ package ssh
 import (
 	"context"
 	"fmt"
-	"github.com/mitchellh/mapstructure"
-	"github.com/ovh/venom"
-	"golang.org/x/crypto/ssh"
 	"io"
 	"os"
 	"os/user"
@@ -14,6 +11,10 @@ import (
 	"strings"
 	"time"
 	"unicode/utf8"
+
+	"github.com/luphaz/venom"
+	"github.com/mitchellh/mapstructure"
+	"golang.org/x/crypto/ssh"
 )
 
 // Name for test ssh

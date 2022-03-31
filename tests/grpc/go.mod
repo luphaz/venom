@@ -1,4 +1,4 @@
-module github.com/ovh/venom/grpc-example-server
+module github.com/luphaz/venom/grpc-example-server
 
 go 1.17
 

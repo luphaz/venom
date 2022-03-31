@@ -6,8 +6,8 @@ import (
 	"time"
 
 	mq "github.com/eclipse/paho.mqtt.golang"
+	"github.com/luphaz/venom"
 	"github.com/mitchellh/mapstructure"
-	"github.com/ovh/venom"
 	"github.com/pkg/errors"
 )
 

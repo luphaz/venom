@@ -24,7 +24,7 @@ import (
 	reflectpb "google.golang.org/grpc/reflection/grpc_reflection_v1alpha"
 	"google.golang.org/grpc/status"
 
-	"github.com/ovh/venom"
+	"github.com/luphaz/venom"
 )
 
 // Name for test exec

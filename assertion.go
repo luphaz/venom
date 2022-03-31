@@ -12,8 +12,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
+	"github.com/luphaz/venom/assertions"
 	"github.com/mitchellh/mapstructure"
-	"github.com/ovh/venom/assertions"
 )
 
 type assertionsApplied struct {

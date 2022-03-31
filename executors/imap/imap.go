@@ -11,7 +11,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/yesnault/go-imap/imap"
 
-	"github.com/ovh/venom"
+	"github.com/luphaz/venom"
 )
 
 // Name for test imap

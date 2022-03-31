@@ -12,8 +12,8 @@ import (
 	"time"
 
 	"github.com/Shopify/sarama"
+	"github.com/luphaz/venom"
 	"github.com/mitchellh/mapstructure"
-	"github.com/ovh/venom"
 )
 
 const (

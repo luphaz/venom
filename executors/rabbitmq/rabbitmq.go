@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/luphaz/venom"
 	"github.com/mitchellh/mapstructure"
-	"github.com/ovh/venom"
 
 	"github.com/streadway/amqp"
 )

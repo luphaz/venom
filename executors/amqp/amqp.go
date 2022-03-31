@@ -6,8 +6,8 @@ import (
 	"fmt"
 
 	amqp "github.com/Azure/go-amqp"
+	"github.com/luphaz/venom"
 	"github.com/mitchellh/mapstructure"
-	"github.com/ovh/venom"
 )
 
 // Name of executor

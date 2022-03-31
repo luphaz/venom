@@ -14,7 +14,7 @@ import (
 
 	"github.com/mitchellh/mapstructure"
 
-	"github.com/ovh/venom"
+	"github.com/luphaz/venom"
 )
 
 // Name of the executor
@@ -69,12 +69,12 @@ Create a file `test.yml` testsuite:
 ```yml
 name: TestSuite
 testcases:
-- name: TestAssertions
-  steps:
-  - type: hello
-    arg: world
-    assertions:
-    - result.body ShouldContainSubstring world
+  - name: TestAssertions
+    steps:
+      - type: hello
+        arg: world
+        assertions:
+          - result.body ShouldContainSubstring world
 ```
 
 Run venom:

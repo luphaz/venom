@@ -18,7 +18,7 @@ import (
 	// Oracle
 	_ "github.com/sijms/go-ora"
 
-	"github.com/ovh/venom"
+	"github.com/luphaz/venom"
 )
 
 // Name of the executor.

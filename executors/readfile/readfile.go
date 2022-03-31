@@ -15,7 +15,7 @@ import (
 	"github.com/mattn/go-zglob"
 	"github.com/mitchellh/mapstructure"
 
-	"github.com/ovh/venom"
+	"github.com/luphaz/venom"
 )
 
 // Name for test readfile

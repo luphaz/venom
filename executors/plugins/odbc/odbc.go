@@ -12,7 +12,7 @@ import (
 	// ODBC
 	_ "github.com/alexbrainman/odbc"
 
-	"github.com/ovh/venom"
+	"github.com/luphaz/venom"
 )
 import "github.com/pkg/errors"
 

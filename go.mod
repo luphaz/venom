@@ -1,4 +1,4 @@
-module github.com/ovh/venom
+module github.com/luphaz/venom
 
 go 1.17
 

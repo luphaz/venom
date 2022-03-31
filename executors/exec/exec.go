@@ -15,7 +15,7 @@ import (
 	"github.com/fsamin/go-dump"
 	"github.com/mitchellh/mapstructure"
 
-	"github.com/ovh/venom"
+	"github.com/luphaz/venom"
 )
 
 // Name for test exec

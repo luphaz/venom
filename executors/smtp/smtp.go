@@ -12,7 +12,7 @@ import (
 	"github.com/mitchellh/mapstructure"
 	"github.com/pkg/errors"
 
-	"github.com/ovh/venom"
+	"github.com/luphaz/venom"
 )
 
 // Name for test smtp

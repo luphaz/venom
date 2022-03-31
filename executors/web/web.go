@@ -12,7 +12,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/sclevine/agouti"
 
-	"github.com/ovh/venom"
+	"github.com/luphaz/venom"
 )
 
 var (

@@ -7,7 +7,7 @@ import (
 
 	"github.com/mitchellh/mapstructure"
 
-	"github.com/ovh/venom"
+	"github.com/luphaz/venom"
 )
 
 // Name of the executor
